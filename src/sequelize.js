@@ -3,7 +3,14 @@ const ArtistModel = require('./models/artist');
 const AlbumModel = require('./models/album');
 const SongModel = require('./models/song');
 
-const { DB_PASSWORD, DB_NAME, DB_USER, DB_HOST, DB_PORT } = process.env;
+const {
+  DB_PASSWORD,
+  DB_NAME,
+  DB_USER,
+  DB_HOST,
+  DB_PORT,
+  CLEARDB_DATABASE_URL,
+} = process.env;
 
 const setupDatabase = () => {
   const sequelize = CLEARDB_DATABASE_URL
